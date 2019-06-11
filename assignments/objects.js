@@ -110,7 +110,7 @@ const parent = {
       name: 'Sam',
       age: '30',
       speak: function() {
-      console.log(`Hello, my name is ${this.name} !`);
+        console.log(`Hello, my name is ${this.name} !`);
       }
     }
   }
