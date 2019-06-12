@@ -18,40 +18,53 @@ const example = {
 }
 
 // Write your intern objects here:
-const mitzi = {
-  id: 1,
-  name: "Mitzi",
-  email: "mmelloy0@psu.edu",
-  gender: "F"
+// const mitzi = {
+//   id: 1,
+//   name: "Mitzi",
+//   email: "mmelloy0@psu.edu",
+//   gender: "F"
+// }
+
+// const kennan = {
+//   id: 2,
+//   name: "Kennan",
+//   email: "kdiben1@tinypic.com",
+//   gender: "M",
+// }
+
+// const keven = {
+//   id: "3",
+//   name: "Keven",
+//   email: "kummery2@wikimedia.org",
+//   gender: "M"
+// }
+
+// const gannie = {
+//   id: "4",
+//   name: "Gannie",
+//   email: "gmartinson3@illinois.edu",
+//   gender: "M"
+// }
+
+// const antonietta = {
+//   id: "5",
+//   name: "Antonietta",
+//   email: "adaine5@samsung.com",
+//   gender: "F"
+// }
+
+function Intern(obj) {
+  this.id = obj.id;
+  this.name = obj.name;
+  this.email = obj.email;
+  this.gender = obj.gender;
 }
 
-const kennan = {
-  id: 2,
-  name: "Kennan",
-  email: "kdiben1@tinypic.com",
-  gender: "M",
-}
-
-const keven = {
-  id: "3",
-  name: "Keven",
-  email: "kummery2@wikimedia.org",
-  gender: "M"
-}
-
-const gannie = {
-  id: "4",
-  name: "Gannie",
-  email: "gmartinson3@illinois.edu",
-  gender: "M"
-}
-
-const antonietta = {
-  id: "5",
-  name: "Antonietta",
-  email: "adaine5@samsung.com",
-  gender: "F"
-}
+const mitzi = new Intern({id: 1, name: 'Mitzi', email: 'mmelloy0@psu.edu', gender: 'F'});
+const kennan = new Intern({ id: 2, name: 'Kennan', email: 'kdiben1@tinypic.com', gender: 'M' });
+const keven = new Intern({ id: 3, name: 'Keven', email: 'kummery2@wikimedia.org', gender: 'M' });
+const gannie = new Intern({ id: 4, name: 'Gannie', email: 'gmartinson3@illinois.edu', gender: 'M' });
+const antonietta = new Intern({ id: 5, name: 'Antonietta', email: 'adaine5@samsung.com', gender: 'F' });
 
 
 // ==== Challenge 2: Reading Object Data ==== 
@@ -128,10 +141,10 @@ console.log(parent.child.age);
 console.log(parent.child.grandchild);
 
 // Have the parent speak
-console.log(parent.speak());
+(parent.speak());
 
 // Have the child speak
-console.log(parent.child.speak());
+(parent.child.speak());
 
 // Have the grandchild speak
-console.log(parent.child.grandchild.speak());
+(parent.child.grandchild.speak());
