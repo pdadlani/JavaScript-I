@@ -17,41 +17,75 @@ const example = {
   "gender": "F"
 }
 
+
+//Solution 1: Individually creating each intern object. Tedious and not efficient. 
 // Write your intern objects here:
-const mitzi = {
-  id: 1,
-  name: "Mitzi",
-  email: "mmelloy0@psu.edu",
-  gender: "F"
+// const mitzi = {
+//   id: 1,
+//   name: "Mitzi",
+//   email: "mmelloy0@psu.edu",
+//   gender: "F"
+// }
+
+// const kennan = {
+//   id: 2,
+//   name: "Kennan",
+//   email: "kdiben1@tinypic.com",
+//   gender: "M",
+// }
+
+// const keven = {
+//   id: "3",
+//   name: "Keven",
+//   email: "kummery2@wikimedia.org",
+//   gender: "M"
+// }
+
+// const gannie = {
+//   id: "4",
+//   name: "Gannie",
+//   email: "gmartinson3@illinois.edu",
+//   gender: "M"
+// }
+
+// const antonietta = {
+//   id: "5",
+//   name: "Antonietta",
+//   email: "adaine5@samsung.com",
+//   gender: "F"
+// }
+
+//Solution 2: function that dynamically creates intern objects by taking in multiple arguments
+// function intern(id, name, email, gender) {
+//   this.id = id;
+//   this.name = name;
+//   this.email = email;
+//   this.gender = gender;
+// }
+
+// const mitzi = new intern(1, 'Mitzi', 'mmelloy0@psu.edu', 'F');
+// const kennan = new intern(2, 'Kennan', 'kdiben1@tinypic.com', 'M');
+// const keven = new intern(3, 'Keven', 'kummery2@wikimedia.org', 'M');
+// const gannie = new intern(4, 'Gannie', 'gmartinson3@illinois.edu', 'M');
+// const antonietta = new intern(5, 'Antonietta', 'adaine5@samsung.com', 'F');
+
+
+//Solution 3: created intern objects using a constructor function
+function Intern(obj) {
+  this.id = obj.id;
+  this.name = obj.name;
+  this.email = obj.email;
+  this.gender = obj.gender;
 }
 
-const kennan = {
-  id: 2,
-  name: "Kennan",
-  email: "kdiben1@tinypic.com",
-  gender: "M",
-}
+const mitzi = new Intern({id: 1, name: 'Mitzi', email: 'mmelloy0@psu.edu', gender: 'F'});
+const kennan = new Intern({ id: 2, name: 'Kennan', email: 'kdiben1@tinypic.com', gender: 'M' });
+const keven = new Intern({ id: 3, name: 'Keven', email: 'kummery2@wikimedia.org', gender: 'M' });
+const gannie = new Intern({ id: 4, name: 'Gannie', email: 'gmartinson3@illinois.edu', gender: 'M' });
+const antonietta = new Intern({ id: 5, name: 'Antonietta', email: 'adaine5@samsung.com', gender: 'F' });
 
-const keven = {
-  id: "3",
-  name: "Keven",
-  email: "kummery2@wikimedia.org",
-  gender: "M"
-}
 
-const gannie = {
-  id: "4",
-  name: "Gannie",
-  email: "gmartinson3@illinois.edu",
-  gender: "M"
-}
 
-const antonietta = {
-  id: "5",
-  name: "Antonietta",
-  email: "adaine5@samsung.com",
-  gender: "F"
-}
 
 
 // ==== Challenge 2: Reading Object Data ==== 
@@ -128,10 +162,10 @@ console.log(parent.child.age);
 console.log(parent.child.grandchild);
 
 // Have the parent speak
-console.log(parent.speak());
+(parent.speak());
 
 // Have the child speak
-console.log(parent.child.speak());
+(parent.child.speak());
 
 // Have the grandchild speak
-console.log(parent.child.grandchild.speak());
+(parent.child.grandchild.speak());
